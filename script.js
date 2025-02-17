@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
             } else if (command === 'sudo cd open page-gallery') {
                 window.location.href = "gallery.html";
             } else if (command === 'sudo cd open page-home') {
-                window.location.href = "virus-code-red.html";
+                window.location.href = "index.html";
             }   else {
                 alert("Unknown command! Try: sudo cd open page-1");
             }
