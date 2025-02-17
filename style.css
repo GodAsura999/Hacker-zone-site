@@ -1,0 +1,99 @@
+/* Vispārējais stils */
+body {
+    background-color: black;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    text-align: center;
+}
+
+/* Glitch efekts */
+.glitch {
+    font-size: 2em;
+    font-weight: bold;
+    position: relative;
+    animation: glitch 1s infinite alternate;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 2px 0 #7700ff, -2px -2px 0 #00ff00; }
+    100% { text-shadow: -2px -2px 0 #7700ff, 2px 2px 0 #00ff00; }
+}
+
+/* Navigācija */
+.nav-bar {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.nav-bar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-bar a {
+    color: #00ff00;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-bottom: 2px solid #00ff00;
+    transition: 0.3s;
+}
+
+.nav-bar a:hover {
+    color: #7700ff;
+    border-bottom: 2px solid #7700ff;
+}
+
+/* Terminālis */
+.terminal {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border: 2px solid #00ff00;
+    text-align: left;
+}
+
+.terminal-output {
+    margin: 0;
+    color: #00ff00;
+    font-size: 1em;
+}
+
+#terminal-input {
+    width: 100%;
+    background: black;
+    color: #00ff00;
+    border: none;
+    font-size: 1em;
+    font-family: "Courier New", monospace;
+    outline: none;
+}
+
+x{
+    color: #4400ff;
+    font-size: 20px;
+    font-family: "Hack", monospace;
+}
+
+z{
+    color: #b300ff;
+    font-size: 30px;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.glitch-small {
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+    animation: glitch-small 1.2s infinite alternate;
+}
+
+@keyframes glitch-small {
+    0% { text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #00ff00; }
+    100% { text-shadow: -2px -2px 0 #ff0000, 2px 2px 0 #00ff00; }
+}
