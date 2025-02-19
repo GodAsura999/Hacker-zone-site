@@ -3,23 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hacker Style Gallery</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="icon" href="logo.jpg">
+    <link rel="icon" type="image/png" href="logo.jpg">
+
+    <style>
+        /* Vispārējais stils */
+        body {
+            background-color: black;
+            color: #00ff00;
+            font-family: "Courier New", monospace;
+            text-align: center;
+        }
+
+        /* Galerijas izkārtojums */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Attēlu ietvars */
+        .gallery a {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Attēlu stils */
+        .gallery img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover efekts */
+        .gallery a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(0, 255, 0, 1);
+        }
+
+        .gallery a:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Modāla loga stils */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #00ff00;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #ff0000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-<img src="virus-code-red-art.jpg" width="500" height="500">
-<img src="hacker-red.jpg" width="300" height="500">
-<img src="code-red-matrix.jpg" width="500" height="500">
 
+    <div class="gallery">
+        <a href="javascript:void(0);" onclick="openModal('virus-code-red-art.jpg')">
+            <img src="virus-code-red-art.jpg" alt="Code Red Virus">
+        </a>
+        <a href="javascript:void(0);" onclick="openModal('hacker-red.jpg')">
+            <img src="hacker-red.jpg" alt="Hacker">
+        </a>
+        <a href="javascript:void(0);" onclick="openModal('code-red-matrix.jpg')">
+            <img src="code-red-matrix.jpg" alt="Code Red Matrix">
+        </a>
+    </div>
 
+<!-- Terminālis -->
+<div class="terminal">
+    <p class="terminal-output">[HACKER SYSTEM] Type command:</p>
+    <input type="text" id="terminal-input" placeholder='Type: sudo cd open page-1' autofocus>
+</div>
 
-        <!-- Terminālis -->
-        <div class="terminal">
-            <p class="terminal-output">[HACKER SYSTEM] Type command:</p>
-            <input type="text" id="terminal-input" placeholder='Type: sudo cd open page-1' autofocus>
-        </div>
-    
 <script src="script.js"></script>
+
+    <!-- Modālais logs -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script>
+        // Atver modālo logu
+        function openModal(imgSrc) {
+            document.getElementById("myModal").style.display = "block";
+            document.getElementById("modal-img").src = imgSrc;
+        }
+
+        // Aizver modālo logu
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+
 </body>
 </html>
