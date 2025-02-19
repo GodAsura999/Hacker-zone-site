@@ -34,22 +34,45 @@
         }
 </style>
 <body>
-    <z>Mūsdienās personas dati ir kļuvuši par vērtīgu preci. 
-    Katru dienu tie tiek vākta, analizēta un dažkārt arī nozagta. 
-    Zināšanas par to, kā aizsargāt savus datus, 
-    ir būtiskas ikvienam, īpaši tiem, 
-    kas darbojas IT un kiberdrošības jomā.</z><br><br>
+  <z>kods:</z><br><br>
+  <p>body {</p>
+    <p>animation: backgroundAnimation 9s linear infinite alternate;</p>
+    <p>margin: 0;</p>
+    <p>padding: 0;</p>
+    <p>font-family: Arial, sans-serif;</p>
+    <p>}</p><br><br>
 
-    
-    <x>Kas ir personas dati?</x>
+    <p>@keyframes backgroundAnimation {</p>
+      <p>0% {</p>
+        <p>background-color: #212121;</p>
+        <p>}</p>
+        <p>25% {</p>
+          <p>background-color: #227649;</p>
+        <p>}</p>
+          <p>50% {</p>
+          <p>background-color: #025118;</p>
+        <p>}</p>
+          <p>75% {</p>
+          <p>background-color: #227649;</p>
+          <p>}</p>
+          <p>100% {</p>
+          <p>background-color: #212121;</p>
+        <p>}</p>
+      <p>}</p><br><br>
 
-    <p>Identifikācijas dati: Vārds, uzvārds, personas kods, pase, vadītāja apliecība.</p><br>
-    <p>Kontaktinformācija: Telefona numurs, e-pasta adrese, dzīvesvietas adrese.</p><br>
-    <p>Finanšu dati: Bankas konta numurs, kredītkaršu dati, kriptovalūtas maku adreses.</p><br>
-    <p>Tehniskie dati: IP adrese, MAC adrese, pārlūkprogrammas informācija, sīkdatnes.</p><br>
-    <p>Biometriskie dati: Pirkstu nospiedumi, acs varavīksnenes attēls, balss paraugs.</p><br>
-    <p>Digitālie paradumi: Pārlūkošanas vēsture, lietotnes, sociālo tīklu aktivitāte.</p>
+<p>body stils:</p><br>
 
+<p>Iestatīts animācijas nosaukums backgroundAnimation, kas darbojas 9 sekundes, ar lineāru (vienmērīgu) pāreju, bezgalīgi atkārtojoties (infinite), mainot virzienu (alternate).</p>
+<p>Noņemti margin un padding (lai aizņemtu visu ekrānu).</p>
+<p>Iestatīta Arial fonta ģimene.</p>
+
+<p>@keyframes backgroundAnimation animācija:</p>
+
+<p>0% (sākums): Tumši pelēks #212121.</p>
+<p>25%: Zaļgani tonis #227649.</p>
+<p>50%: Tumši zaļš #025118.</p>
+<p>75%: Atgriežas pie #227649.</p>
+<p>100%: Atgriežas sākumā #212121.</p><br><br><br><br>
     
     <!-- Terminālis -->
     <div class="terminal">
